@@ -1,0 +1,89 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link active" href="/products">products</a>
+        </li>
+
+      </ul>
+    </div>
+        <p class="user-name">{{userName}} </p>
+  </div>
+</nav>
+
+<div class="sec-page">
+
+  <select id="select-products" class="form-select width" aria-label="Small select example">
+    <option value="10" selected>Produtos por página</option>
+    <option value="10">10</option>
+    <option value="5">5</option>
+    <option value="3">3</option>
+  </select>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination" id="select-page" >
+      <li class="page-item" value="1">1</li>
+      <li class="page-item" value="2">2</li>
+      <li class="page-item" value="3">3</li>
+       <li class="page-item" value="4">4</li>
+    </ul>
+  </nav>
+
+  <select id="order-products-price" class="form-select width" aria-label="Small select example">
+    <option value="0" selected>Ordenar por:</option>
+    <option value="-1">Menor preço</option>
+    <option value="1">Maior preço</option>
+  </select>
+
+</div>
+
+
+<div id="prodsList" class="card-products">
+  {{#if prods.length}}
+  {{#each prods}}
+  <div class="card-body">
+    <img src="" class="" alt="imagem product">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{description}}</p>
+    <p class="card-text"> R$:{{price}}</p>
+    <p>{{code}}</p>
+    <button id="btn-chat"type="button" class="btn btn-info">Chat</button>
+      <p class="card-text"> {{_id}}</p>
+
+    <button id="productID" onclick="handleAddCart('{{_id}}')" class="btn btn-secondary btnAddCart">Adicionar ao Carrinho</button>
+  </div>
+
+  {{/each}}
+  {{else}}
+  <div>
+    <div class="card-body">
+      <img src="" class="" alt="imagem product">
+      <h5 class="card-title">{{productFound.protitle}}</h5>
+      <p class="card-text">{{productFound.description}}</p>
+      <p class="card-text"> R$:{{productFound.price}}</p>
+      <p class="card-text"> code: {{productFound.code}}</p>
+      <a href="#" class="btn btn-secondary">Adicionar ao Carrinho</a>
+    </div>
+
+  </div>
+  {{/if}}
+
+</div>
+
+
+<script src="/js/index.js"></script>

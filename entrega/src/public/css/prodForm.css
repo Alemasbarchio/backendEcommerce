@@ -1,0 +1,131 @@
+
+form {
+  display:block;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+label {
+  font-weight: bold;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+br {
+  display: none;
+}
+
+.form-register{
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+ 
+}
+.user-name{
+  color: white;
+   
+}
+#btn-register{
+  display: flex;
+  margin-top: 10px;
+  
+}
+.user-cart{
+  display: flex;
+  gap:150px;
+  margin-right: 50px;
+}
+
+/* Estilos para o contêiner de produtos */
+#prodsList {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Estilos para cada item de produto */
+#prodsList p {
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Estilos para os spans dentro de cada item de produto */
+#prodsList span {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilos para o título */
+#prodsList span:first-child {
+  font-weight: bold;
+  color: #007bff;
+}
+.card-products{
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+  background-color: #007bff;
+
+}
+
+
+.card-body{
+   
+  width: 350px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+ justify-content: center;
+  background-color: #f0f0f0;
+ 
+}
+.sec-page{
+  padding-top: 10px;
+  display: flex;
+  justify-content:space-between;
+  
+    }
+
+    .form-select.width{
+      width: 200px;
+      height: 40px;
+    }
+ 
+    .page-item{
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+      width: 50px;
+      cursor: pointer;
+      border: #2c5dff 1px solid;
+      
+       
+    }
+    .page-item:hover{
+      background-color: #007bff;
+      color: white;
+             
+    }
+
+  

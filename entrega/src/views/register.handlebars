@@ -1,0 +1,36 @@
+ <h1>Cadastrar Usuário</h1>
+
+ <div >             
+          
+        <form id="form-register" action="/register" method="post">
+                        {{#if isAdmin}}
+                       <p>Admin:{{userName}}</p>
+                       {{else}}
+                       <p>User:{{userName}}</p>
+                       {{/if}}
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+                       <div class="form-register"> 
+                <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+   
+            </div>
+            
+
+            <br>
+            <button id="btn-register" type="submit">Register</button>
+            <a class="btn btn-info" href="/">Voltar</a>
+        </form>
+    </div>
+    
